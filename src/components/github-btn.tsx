@@ -27,7 +27,7 @@ export default function GithubButton() {
     const navigate = useNavigate();
     const onClick = async () => {
         try {
-            const provider = new GithubAuthProvider();
+            const provider = new GithubAuthProvider();  // provider은 github에서 로그인한다라는 의미
             await signInWithPopup(auth, provider)
             navigate("/");
         } catch (error){
